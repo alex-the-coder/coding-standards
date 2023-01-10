@@ -1,0 +1,31 @@
+{
+  "name": "alex-the-coder/coding-standards",
+  "description": "Alex Coder's PHP Coding Standards",
+  "keywords": [
+    "php",
+    "coding",
+    "standard",
+    "phpcs",
+    "phpcbf",
+    "codesniffer",
+    "alexcoder"
+  ],
+  "homepage": "https://alexcoder.ru/coding-standards",
+  "license": "BSD-3-Clause",
+  "type": "phpcodesniffer-standard",
+  "authors": [
+    {
+      "name": "Alex Coder",
+      "homepage": "https://alexcoder.ru/",
+      "role": "Founder and project lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/alex-the-coder/coding-standards/issues?state=open",
+    "source": "https://github.com/alex-the-coder/coding-standards"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "squizlabs/php_codesniffer": "^3.6.0"
+  }
+}

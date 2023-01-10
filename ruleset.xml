@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="AlexCoderPHPCS">
+    <description>Alex Coder's PHP Coding Standard</description>
+    <arg name="extensions" value="php" />
+    <arg name="colors" />
+    <!-- @see https://www.php-fig.org/psr/psr-2/ -->
+    <rule ref="PSR2">
+        <!-- Property names and methods MUST start with an initial underscore if they are
+        private/protected. -->
+        <exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
+        <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+    </rule>
+    <!-- @see https://www.php-fig.org/psr/psr-12/ -->
+    <rule ref="PSR12">
+        <exclude name="PSR12.Properties.ConstantVisibility.NotFound" />
+    </rule>
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <!-- Ensures doc blocks follow basic formatting -->
+    <rule ref="Generic.Commenting.DocComment">
+        <exclude name="Generic.Commenting.DocComment.ContentAfterOpen" />
+        <exclude name="Generic.Commenting.DocComment.ContentBeforeClose" />
+        <exclude name="Generic.Commenting.DocComment.MissingShort" />
+    </rule>
+    <!-- Warn about lines longer than 256 chars, and error for lines longer than 1024 chars. -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="256" />
+            <property name="absoluteLineLimit" value="1024" />
+            <property name="ignoreComments" value="true" />
+        </properties>
+    </rule>
+    <!-- Checks the cyclomatic complexity (McCabe) for functions
+    (https://en.wikipedia.org/wiki/Cyclomatic_complexity) -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="10" />
+            <property name="absoluteComplexity" value="20" />
+        </properties>
+    </rule>
+    <!-- Public functions MUST be properly commented -->
+    <rule ref="Squiz.Commenting.FunctionComment">
+        <properties>
+            <property name="minimumVisibility" value="public" />
+            <property name="skipIfInheritdoc" value="true" />
+        </properties>
+    </rule>
+    <!-- One space padding around concatenation operators -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="ignoreNewlines" value="true" />
+        </properties>
+    </rule>
+    <!-- If string doesn't contain variables or single quotes, use single quotes. -->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.NotRequired" />
+</ruleset>
